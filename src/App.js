@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import KakaoLogLand from './pages/KakaoLogLand';
 import KakaoLogSuccess from './pages/KakaoLogSuccess';
+import KakaoLogRedirect from './pages/KakaoLogRedirect'; // 추가된 부분
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<KakaoLogLand />} />
         <Route path="/kakaologsuccess" element={<KakaoLogSuccess />} />
+        <Route path="/oauth" element={<KakaoLogRedirect />} /> {/* 추가된 부분 */}
       </Routes>
       {/* <Switch>
         <Route exact path="/" component={KakaoLogLand} />
