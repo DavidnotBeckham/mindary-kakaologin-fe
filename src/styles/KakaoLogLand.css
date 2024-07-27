@@ -1,0 +1,14 @@
+.kakao-log-land {
+  text-align: center;
+  padding: 20px;
+}
+
+.kakao-log-land h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.kakao-log-land button {
+  padding: 10px 20px;
+  font-size: 1em;
+}
