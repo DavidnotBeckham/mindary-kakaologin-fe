@@ -15,24 +15,24 @@ const KakaoLogRedirect = () => {
       axios.post(`${process.env.REACT_APP_API_URL}/mindary/accounts/kakao/login`, { code })
         .then((r) => {
           console.log(r.data);
-          localStorage.setItem('accessToken', r.data.data.accessToken); // 토큰 저장
+          localStorage.setItem('accessToken', r.data.data.access_token); // 토큰 저장 //accessToken이었음 원래.
 
           axios.get(`${process.env.REACT_APP_API_URL}/mindary/accounts/kakao/verify`, {
             headers: {
-              Authorization: `Bearer ${r.data.data.accessToken}`,
+              Authorization: `Bearer ${r.data.data.access_token}`,
             },
           })
           .then(response => {
-            console.log(response.data);
+            alert(response.data);
             navigate('/kakaologsuccess');
           })
           .catch(error => {
-            console.error('Verification failed:', error);
+            alert('Verification failed:', error);
             // 에러 페이지로 이동하거나 에러 메시지 표시
           });
         })
         .catch(error => {
-          console.error('Login failed:', error);
+          alert('Login failed:', error);
           // 에러 페이지로 이동하거나 에러 메시지 표시
         });
     }
