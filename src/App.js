@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import KakaoLogLand from './pages/KakaoLogLand';
 import KakaoLogSuccess from './pages/KakaoLogSuccess';
 import KakaoLogRedirect from './pages/KakaoLogRedirect';
+import SignUp from './pages/SignUp';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<KakaoLogLand />} />
         <Route path="/oauth" element={<KakaoLogRedirect />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/kakaologsuccess" element={<KakaoLogSuccess />} />
       </Routes>
       {/* <Switch>
