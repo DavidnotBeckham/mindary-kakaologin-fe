@@ -8,7 +8,7 @@ const KakaoLogRedirect = () => {
   const url = new URL(urlStr);
   const urlparams = url.searchParams;
   const code = urlparams.get('code');
-  console.log(code);
+  console.log(code); //
 
   useEffect(() => {
     if (code) {
