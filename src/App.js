@@ -1,18 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // 3, 4번째 줄과 같은 의미다.
+// import { BrowserRouter as Router} from 'react-router-dom';
+// import { Route, Routes } from 'react-router-dom';
 import KakaoLogLand from './pages/KakaoLogLand';
-import KakaoLogSuccess from './pages/KakaoLogSuccess';
 import KakaoLogRedirect from './pages/KakaoLogRedirect';
-import SignUp from './pages/SignUp';
+import KakaoLogSignUp from './pages/KakaoLogSignUp';
+import KakaoLogSuccess from './pages/KakaoLogSuccess';
+import Logout from './components/Logout';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route exact path="/" element={<KakaoLogLand />} />
-        <Route path="/oauth" element={<KakaoLogRedirect />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/kakaologredirect" element={<KakaoLogRedirect />} />
+        <Route path="/kakaologsignup" element={<KakaoLogSignUp />} />
         <Route path="/kakaologsuccess" element={<KakaoLogSuccess />} />
+        <Route path="/logout" element={<Logout />} />
       </Routes>
       {/* <Switch>
         <Route exact path="/" component={KakaoLogLand} />

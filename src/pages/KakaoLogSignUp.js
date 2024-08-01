@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Signup = () => {
+const KakaoLogSignUp = () => {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -67,4 +67,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default KakaoLogSignUp;

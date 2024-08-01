@@ -1,6 +1,6 @@
 import React from 'react';
 import KakaoLogBtn from '../components/KakaoLogBtn';
-import '../styles/KakaoLogLand.css'; // 예시로 CSS 파일을 추가
+import '../styles/KakaoLogLand.css';
 
 const KakaoLogLand = () => {
   return (
