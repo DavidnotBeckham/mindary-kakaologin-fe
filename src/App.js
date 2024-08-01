@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<KakaoLogLand />} />
-        <Route path="/kakaologredirect" element={<KakaoLogRedirect />} />
+        <Route path="/oauth" element={<KakaoLogRedirect />} />
         <Route path="/kakaologsignup" element={<KakaoLogSignUp />} />
         <Route path="/kakaologsuccess" element={<KakaoLogSuccess />} />
         <Route path="/logout" element={<Logout />} />

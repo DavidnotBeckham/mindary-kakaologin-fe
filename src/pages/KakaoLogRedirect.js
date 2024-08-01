@@ -11,6 +11,7 @@ const KakaoLogRedirect = () => {
 
   useEffect(() => {
     if (code) {
+      console.log('Received code:');
       axios.post(`${process.env.REACT_APP_API_URL}/mindary/accounts/kakao/login`, { access_code: code })
         .then((response) => {
           if (response.status === 200) {
